@@ -20,14 +20,12 @@ cat spaces\ in\ this\ filename
 ```
 ## level 4
 ```bash
-cd inhere
-ls -a
+ls -a inhere
 cat .hidden
 ```
 ## level 5
 ```bash
-cd inhere
-file ./*
+file inhere/*
 ```
 A human readable file will be of ASCII text type
 ## level 6
@@ -37,9 +35,7 @@ find -type f -size 1033c | xargs cat
 ```
 ## level 7
 ```bash
-cd /
-find -type f -size 33c -user bandit7 -group bandit6
-cat ./var/lib/dpkg/info/bandit7.password
+find / -type f -size 33c -user bandit7 -group bandit6 2> /dev/null | xargs cat
 ```
 ## level 8
 ```bash
@@ -61,4 +57,5 @@ sort data.txt | base64 -d
 ```bash
 sort data.txt | tr 'a-zA-Z' 'n-za-mN-ZA-M'
 ```
-5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+## level 13
+```bash
